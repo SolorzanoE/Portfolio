@@ -2,7 +2,11 @@ import { Box, Stack, Typography } from "@mui/material"
 
 function AboutMe() {
   return (
-    <Stack spacing={2}>
+    <Stack spacing={2}
+      sx={{
+        marginBottom: "5rem"
+      }}
+    >
       <Typography> Sobre Mí </Typography>
       <Typography> Mi Historia </Typography>
       <Typography>
