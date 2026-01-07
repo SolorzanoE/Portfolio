@@ -6,19 +6,21 @@ function Home() {
   return (
     <Stack
       direction="row"
-      spacing={2}
+      spacing={4}
       sx={{
-        flex: 1,
         minHeight: "100dvh",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
       <img
-        src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Fbuscar%2Fsin%2520im%25C3%25A1genes%2520de%2520derechos%2520de%2520autor%2F&ved=0CBUQjRxqFwoTCNi-scex85EDFQAAAAAdAAAAABAI&opi=89978449"
-        width="100px"
+        src="/src/assets/profile.png"
+        width="25%"
+        style={{
+          borderRadius: 100
+        }}
       />
-      <Stack spacing={1}>
+      <Stack spacing={1} width="50%">
         <Typography variant="h2"
           sx={{ fontWeight: "bold" }}
         >
@@ -28,9 +30,8 @@ function Home() {
           Ingeniero de Software Full Stack
         </Typography>
         <Typography>
-          Apasionado por crear soluciones tecnológicas innovadoras. <br />
-          Con más de + años de experiencia desarrollando <br />
-          aplicaciones web y móviles escalables.
+          Ingeniero de Software apasionado por la tecnología y los modelos de negocio, 
+          siempre dispuesto a enfrentar nuevos retos, buscando soluciones óptimas y escalables.
         </Typography>
         <Stack direction="row">
           <IconButton href={ GITHUB_URL }>
