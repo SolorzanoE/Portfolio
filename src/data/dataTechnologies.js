@@ -8,7 +8,7 @@ export const dataTechnologies = [
     area: "Backend"
   },
   {
-    name: "SpringBoot",
+    name: "Java",
     image: "",
     area: "Backend"
   }

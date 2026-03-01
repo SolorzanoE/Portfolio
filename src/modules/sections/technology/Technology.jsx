@@ -14,7 +14,7 @@ const Technology = () => {
     .filter(data => selectedChip === "Todos" ? data : data.area === selectedChip )
 
   return (
-    <Stack>
+    <Stack spacing={2}>
       <Typography> Tecnologías </Typography>
       <Typography> Stack tecnológico </Typography>
       <Stack direction="row" spacing={2}>
@@ -27,11 +27,15 @@ const Technology = () => {
         ))}
       </Stack>
       <Grid container
-        columns={{ xs: 2, sm: 3, md: 4, lg: 5}}  
+        columns={{ xs: 2, sm: 3, md: 4, lg: 5 }}  
+        spacing={3}
       >
         { filterTechnology.map(data => (
           <Grid key={data.name}
             size={1}
+            sx={{
+              bgcolor: "red"
+            }}
           >
             { data.name }
           </Grid>
