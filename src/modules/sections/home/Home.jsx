@@ -2,6 +2,21 @@ import { Email, GitHub, LinkedIn } from "@mui/icons-material"
 import { IconButton, Stack, Typography } from "@mui/material"
 import { EMAIL_ADDRESS, GITHUB_URL, LINKEDIN_URL } from "@root/config"
 
+const links = [
+  {
+    icon: <GitHub fontSize="large" />,
+    link: GITHUB_URL
+  },
+  {
+    icon: <LinkedIn fontSize="large"/>,
+    link: LINKEDIN_URL
+  },
+  {
+    icon: <Email fontSize="large" />,
+    link: EMAIL_ADDRESS
+  }
+]
+
 function Home() {
   return (
     <Stack
@@ -14,7 +29,7 @@ function Home() {
       }}
     >
       <img
-        src="/src/assets/profile.png"
+        src="src/assets/profile.png"
         width="25%"
         style={{
           borderRadius: 100
@@ -34,15 +49,13 @@ function Home() {
           siempre dispuesto a enfrentar nuevos retos, buscando soluciones óptimas y escalables.
         </Typography>
         <Stack direction="row">
-          <IconButton href={ GITHUB_URL }>
-            <GitHub fontSize="large" />
-          </IconButton>
-          <IconButton href={ LINKEDIN_URL }>
-            <LinkedIn fontSize="large"/>
-          </IconButton>
-          <IconButton href={ `mailto:${EMAIL_ADDRESS}` }>
-            <Email fontSize="large" />
-          </IconButton>
+          { links.map(data => (
+            <IconButton key={data.link}
+              href={data.link}
+            >
+              { data.icon }
+            </IconButton>
+          )) }
         </Stack>
       </Stack>
     </Stack>
