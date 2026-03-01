@@ -1,8 +1,9 @@
-import Header from "@/modules/header"
-import Home from "@/modules/sections/home"
+import Header from "@/modules/Header"
+import Home from "@/modules/sections/Home"
 import { Container } from "@mui/material"
-import AboutMe from "@/modules/sections/about-me"
-import Experiencie from "@/modules/sections/experiencie"
+import AboutMe from "@/modules/sections/AboutMe"
+import Experiencie from "@/modules/sections/Experiencie"
+import Proyect from "@/modules/sections/Project"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Home />
         <AboutMe/>
         <Experiencie />
+        <Proyect />
       </Container>
     </>
   )
