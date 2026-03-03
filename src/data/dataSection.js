@@ -1,4 +1,4 @@
-const dataSection = {
+export const dataSection = {
   home: {
     id: "home",
     name: "Inicio"
