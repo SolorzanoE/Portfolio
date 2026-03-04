@@ -7,10 +7,11 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { dataExperiencie } from "@/data/dataExperience";
 import ExperiencieCard from "./ExperienceCard";
+import { dataSection } from "@/data/dataSection";
 
 function Experiencie() {
   return (
-    <Stack>
+    <Stack id={dataSection.experience.id}>
       <Typography> Experiencia </Typography>
       <Typography> Mi Trayectoria Profesional </Typography>
       <Timeline position="alternate">

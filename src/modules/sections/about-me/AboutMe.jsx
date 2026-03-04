@@ -1,10 +1,14 @@
+import { dataSection } from "@/data/dataSection"
 import { Box, Stack, Typography } from "@mui/material"
 
 const AboutMe = () => {
   return (
-    <Stack spacing={2}
+    <Stack id={dataSection.aboutMe.id} 
+      spacing={2}
       sx={{
-        marginBottom: "5rem"
+        minHeight: "100dvh",
+        marginBottom: "5rem",
+        justifyContent: "center"
       }}
     >
       <Typography> Sobre Mí </Typography>

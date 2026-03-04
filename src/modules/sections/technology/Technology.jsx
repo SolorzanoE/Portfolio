@@ -2,6 +2,7 @@ import { Grid, Stack, Typography } from "@mui/material"
 import TechnologyChip from "./TechnologyChip"
 import { useState } from "react"
 import { dataTechnologies } from "@/data/dataTechnologies"
+import { dataSection } from "@/data/dataSection"
 
 const areas = ["Todos", "Backend", "Frontend", "Mobile", "Database"]
 
@@ -14,7 +15,9 @@ const Technology = () => {
     .filter(data => selectedChip === "Todos" ? data : data.area === selectedChip )
 
   return (
-    <Stack spacing={2}>
+    <Stack id={dataSection.technology.id}
+      spacing={2}
+    >
       <Typography> Tecnologías </Typography>
       <Typography> Stack tecnológico </Typography>
       <Stack direction="row" spacing={2}>

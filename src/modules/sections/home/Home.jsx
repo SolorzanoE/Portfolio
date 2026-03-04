@@ -1,3 +1,4 @@
+import { dataSection } from "@/data/dataSection"
 import { Email, GitHub, LinkedIn } from "@mui/icons-material"
 import { IconButton, Stack, Typography } from "@mui/material"
 import { EMAIL_ADDRESS, GITHUB_URL, LINKEDIN_URL } from "@root/config"
@@ -19,7 +20,7 @@ const links = [
 
 function Home() {
   return (
-    <Stack
+    <Stack id={dataSection.home.id}
       direction="row"
       spacing={4}
       sx={{
