@@ -1,45 +1,113 @@
+import SectionHeader from "@/components/SectionHeader"
 import { dataSection } from "@/data/dataSection"
-import { Box, Stack, Typography } from "@mui/material"
+import { Box, Grid, Stack, Typography } from "@mui/material"
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote"
 
 const AboutMe = () => {
   return (
-    <Stack id={dataSection.aboutMe.id} 
-      spacing={2}
+    <Stack
+      id={dataSection.aboutMe.id}
       sx={{
-        minHeight: "100dvh",
-        marginBottom: "5rem",
-        justifyContent: "center"
+        paddingBlock: { xs: 8, md: 14 }
       }}
     >
-      <Typography> Sobre Mí </Typography>
-      <Typography> Mi Historia </Typography>
-      <Typography>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel lobortis velit. Donec vitae urna imperdiet, iaculis libero a, dignissim eros. Morbi sed euismod ante. Pellentesque a leo at nunc mattis aliquam. Nam malesuada est vel diam aliquet tincidunt. Donec ut enim lacus. Donec ornare magna sapien. Maecenas pellentesque, sapien id pulvinar lacinia, arcu nunc vulputate odio, eget elementum justo erat ullamcorper turpis. Praesent eu ornare nulla. Aenean cursus mi id tempor suscipit. Suspendisse rhoncus, risus in dictum scelerisque, felis magna eleifend velit, vitae dictum risus ante eu urna. Fusce id euismod tortor. Vestibulum placerat tellus nec ex fermentum blandit.
+      <SectionHeader eyebrow="Sobre mí" title="Mi" italicWord="historia" />
 
-        Integer id leo at enim aliquam varius. Aliquam erat volutpat. Ut a maximus eros. Suspendisse a augue at purus pharetra vulputate sed eget odio. In viverra pellentesque suscipit. Nulla dignissim lacus non porta consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc id viverra lectus.
+      <Grid container spacing={{ xs: 4, md: 8 }} alignItems="flex-start">
+        <Grid size={{ xs: 12, md: 7 }}>
+          <Stack spacing={3}>
+            <Typography
+              sx={{
+                color: "text.secondary",
+                fontSize: { xs: "1rem", md: "1.08rem" },
+                lineHeight: 1.7
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+              vel lobortis velit. Donec vitae urna imperdiet, iaculis libero a,
+              dignissim eros. Morbi sed euismod ante. Pellentesque a leo at nunc
+              mattis aliquam.
+            </Typography>
+            <Typography
+              sx={{
+                color: "text.secondary",
+                fontSize: { xs: "1rem", md: "1.08rem" },
+                lineHeight: 1.7
+              }}
+            >
+              Integer id leo at enim aliquam varius. Aliquam erat volutpat. Ut a
+              maximus eros. Suspendisse a augue at purus pharetra vulputate sed
+              eget odio. In viverra pellentesque suscipit. Nulla dignissim lacus
+              non porta consequat.
+            </Typography>
+            <Typography
+              sx={{
+                color: "text.secondary",
+                fontSize: { xs: "1rem", md: "1.08rem" },
+                lineHeight: 1.7
+              }}
+            >
+              Proin et semper elit. In tristique bibendum magna, id sollicitudin
+              mauris ullamcorper eget. Nam dictum sed erat vel auctor.
+            </Typography>
+          </Stack>
+        </Grid>
 
-        Proin et semper elit. In tristique bibendum magna, id sollicitudin mauris ullamcorper eget. Nam dictum sed erat vel auctor. Donec vel enim rhoncus, tristique enim non, auctor sapien. Mauris quis ornare dui. Etiam vitae ligula turpis. Duis egestas auctor vestibulum. Curabitur semper, ipsum et dignissim volutpat, nulla urna tristique nunc, eget tincidunt libero nibh eu leo. Proin cursus metus non nisl iaculis rhoncus. Donec suscipit molestie purus. Vivamus ultricies, augue sed fermentum suscipit, nulla ante imperdiet tortor, eu eleifend urna turpis et ligula. Nulla eu nulla vitae neque efficitur volutpat fermentum et erat. Nam elit lorem, rhoncus eget dui eu, bibendum tempus nunc. Duis vitae posuere augue, sed maximus sapien. Curabitur diam dolor, rhoncus id iaculis ac, fringilla at tortor. In non enim ornare, ornare velit id, placerat turpis.
-
-        Curabitur quam urna, luctus laoreet ullamcorper sed, aliquam eget metus. Ut laoreet mauris vel quam tincidunt fermentum. Nulla varius lobortis urna nec volutpat. Cras porta ipsum ornare mollis facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur consectetur quam nunc, a tincidunt lectus imperdiet non. Aenean luctus, eros in dignissim tempus, risus justo gravida ex, vitae tempor metus felis id odio. Maecenas in gravida augue. Nunc aliquam erat dui, blandit pulvinar felis molestie eu.
-      </Typography>
-      <Stack direction="row"
-        spacing={2}
-        sx={{
-          alignItems: "center"
-        }}
-      >
-        <Box 
-          sx={{
-            width: 5,
-            height: 100,
-            bgcolor: "white"
-          }}
-        />
-        <Stack>
-          <Typography> Talk is cheap. Show me the code. </Typography>
-          <Typography> - LINUS TORVALDS </Typography>
-        </Stack>
-      </Stack>
+        <Grid size={{ xs: 12, md: 5 }}>
+          <Box
+            sx={{
+              position: "relative",
+              padding: { xs: 3, md: 4 },
+              borderRadius: 3,
+              border: "1px solid",
+              borderColor: "divider",
+              bgcolor: "background.paper",
+              overflow: "hidden",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                inset: 0,
+                background: (t) =>
+                  t.palette.mode === "dark"
+                    ? "radial-gradient(400px 200px at 100% 0%, rgba(34,211,238,0.10), transparent 60%)"
+                    : "radial-gradient(400px 200px at 100% 0%, rgba(8,145,178,0.08), transparent 60%)",
+                pointerEvents: "none"
+              }
+            }}
+          >
+            <FormatQuoteIcon
+              sx={{
+                position: "absolute",
+                top: 10,
+                right: 14,
+                fontSize: 52,
+                color: "secondary.main",
+                opacity: 0.18
+              }}
+            />
+            <Stack spacing={2.5} sx={{ position: "relative" }}>
+              <Typography
+                sx={{
+                  fontFamily: "'Instrument Serif', serif",
+                  fontStyle: "italic",
+                  fontSize: { xs: "1.75rem", md: "2.1rem" },
+                  fontWeight: 400,
+                  lineHeight: 1.25,
+                  letterSpacing: "-0.01em"
+                }}
+              >
+                Talk is cheap. Show me the code.
+              </Typography>
+              <Stack direction="row" spacing={1.5} alignItems="center">
+                <Box sx={{ width: 24, height: "1px", bgcolor: "secondary.main" }} />
+                <Typography variant="overline" sx={{ color: "secondary.main" }}>
+                  Linus Torvalds
+                </Typography>
+              </Stack>
+            </Stack>
+          </Box>
+        </Grid>
+      </Grid>
     </Stack>
   )
 }

@@ -1,6 +1,35 @@
-/* Hidden the scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 body::-webkit-scrollbar {
   overflow: auto;
   scrollbar-width: none;
   display: none;
+}
+
+::selection {
+  background-color: rgba(34, 211, 238, 0.28);
+  color: inherit;
+}
+
+section[id], div[id], [id] {
+  scroll-margin-top: 96px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
 }

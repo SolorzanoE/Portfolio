@@ -2,13 +2,26 @@ import { Chip } from "@mui/material"
 
 const TechnologyChip = ({ label, onClick, selected }) => {
   return (
-    <Chip clickable
+    <Chip
+      clickable
       label={label}
       onClick={onClick}
+      variant={selected ? "filled" : "outlined"}
       sx={{
-        color: selected ? "white" : "black",
-        bgcolor: selected ? "black" : "white",
-        borderRadius: 2
+        borderRadius: 1,
+        paddingInline: 0.5,
+        fontSize: "0.78rem",
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        borderColor: "divider",
+        color: selected ? "primary.contrastText" : "text.primary",
+        bgcolor: selected ? "primary.main" : "transparent",
+        transition: "all 0.25s ease",
+        "&:hover": {
+          bgcolor: selected ? "primary.main" : "transparent",
+          borderColor: "secondary.main",
+          color: selected ? "primary.contrastText" : "secondary.main"
+        }
       }}
     />
   )
