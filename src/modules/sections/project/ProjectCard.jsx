@@ -147,8 +147,9 @@ const ProjectCard = ({ data = {} }) => {
             aria-label="Abrir proyecto"
             sx={{
               flexShrink: 0,
-              width: 34,
-              height: 34,
+              display: demoUrl ? "inherit" : "none",
+              width: 25,
+              height: 25,
               border: "1px solid",
               borderColor: "divider",
               color: "text.primary",
