@@ -26,7 +26,7 @@ const AboutMe = () => {
               Soy estudiante de último semestre en <strong>Ingeniería en Desarrollo y 
               Tecnologías de Software</strong>. A lo largo de mi formación, he consolidado mi 
               perfil técnico y de liderazgo participando activamente en 
-              hackathones de alto nivel organizados por <strong>Enactus y Apple</strong>.
+              hackatones de alto nivel organizados por <strong>Enactus y Apple</strong>.
             </Typography>
             <Typography
               sx={{
@@ -35,7 +35,7 @@ const AboutMe = () => {
                 lineHeight: 1.7
               }}
             >
-              Cuento con experiencia practica como <strong>Desarrollador de Software Freelance
+              Cuento con experiencia práctica como <strong>Desarrollador de Software Freelance
               Subcontratado</strong>, colaborando de manera externa con empresas en la toma de decisiones 
               técnicas y el desarrollo de productos bajo entornos colaborativos.
             </Typography>
@@ -47,7 +47,7 @@ const AboutMe = () => {
               }}
             >
               Actualmente, me encuentro diseñando y construyendo un <strong>sistema de 
-              soporte de servicios</strong> a traves de tickets, 
+              soporte de servicios</strong> a través de tickets, 
               aplicando buenas prácticas de arquitectura y desarrollo de software.
             </Typography>
           </Stack>
