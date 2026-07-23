@@ -1,6 +1,6 @@
 export const dataExperiencie = [
   {
-    title: "Practicas profesionales",
+    title: "Practicas Profesionales",
     company: "INIFAP",
     startDate: new Date("2024-6-1"), 
     endDate: new Date("2024-12-1"), 
@@ -8,7 +8,7 @@ export const dataExperiencie = [
     technologies: ["Java", "PostgreSQL", "Desktop"]
   },
   {
-    title: "Desarrollador fullstack",
+    title: "Desarrollador Full Stack",
     company: "Freelance - Subcontratado",
     startDate: new Date("2024-12-15"), 
     endDate: new Date("2025-09-26"), 
@@ -16,7 +16,7 @@ export const dataExperiencie = [
     technologies: ["Spring Framework", "PostgreSQL", "React", "JavaScript", "Java", "MUI", "Web"]
   },
   {
-    title: "Servicio social",
+    title: "Servicio Social",
     company: "Compusur",
     startDate: new Date("2025-12-22"), 
     endDate: new Date("2026-6-27"), 
